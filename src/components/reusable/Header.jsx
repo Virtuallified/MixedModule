@@ -16,6 +16,7 @@ import MailIcon from '@mui/icons-material/Mail';
 import NotificationsIcon from '@mui/icons-material/Notifications';
 import MoreIcon from '@mui/icons-material/MoreVert';
 import Link from '@mui/material/Link';
+// import { Link } from "react-router-dom";
 
 const Search = styled('div')(({ theme }) => ({
   position: 'relative',
@@ -185,16 +186,16 @@ export default function Header() {
               inputProps={{ 'aria-label': 'search' }}
             />
           </Search>
-          <Link href="/" underline="hover" style={{color: "white"}} pr={2}>
+          <Link href="/" underline="hover" style={{ color: "white" }} pr={2}>
             Home
           </Link>
-          <Link href="dashboard" underline="hover" style={{color: "white"}} pr={2}>
+          <Link href="dashboard" underline="hover" style={{ color: "white" }} pr={2}>
             Dashboard
           </Link>
-          <Link href="about" underline="hover" style={{color: "white"}} pr={2}>
+          <Link href="about" underline="hover" style={{ color: "white" }} pr={2}>
             About
           </Link>
-          <Link href="contact" underline="hover" style={{color: "white"}} pr={2}>
+          <Link href="contact" underline="hover" style={{ color: "white" }} pr={2}>
             Contacts
           </Link>
           <Box sx={{ flexGrow: 1 }} />
