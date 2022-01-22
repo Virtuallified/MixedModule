@@ -1,6 +1,4 @@
-export const ADD_TASK = "ADD_CONTACT"
-export const DEL_TASK = "DELETE_CONTACT"
-export const STS_TASK = "STATUS_CONTACT"
+import { ADD_TASK, DEL_TASK, STS_TASK } from "./constants"
 
 export const addTask = (task) => ({
     type: ADD_TASK,

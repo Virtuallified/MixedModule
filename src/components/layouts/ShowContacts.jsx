@@ -7,11 +7,12 @@ import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import CheckCircleIcon from '@mui/icons-material/CheckCircle';
 
-export default function OutlinedCard( { contacts, deleteCon, compOrder } ) {
-  // console.log(contacts[0].text)
+export default function OutlinedCard({ contacts, deleteCon, compOrder }) {
+  // console.log(contacts)
+  // console.log(contacts['taskItems'][0].text)
   return (
     <React.Fragment>
-      {contacts.map((cont) => {
+      {contacts['taskItems'].map((cont) => {
         return (
           <Box sx={{ minWidth: 275 }} key={cont.text.sln}>
             <CardContent>

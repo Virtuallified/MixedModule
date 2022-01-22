@@ -4,9 +4,11 @@ import React from 'react'
    you also need to use "element" instead of "component" */
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom"; 
 /* Components */
-import About from '../components/About'
-import Error from '../components/Error'
-import Main from '../containers/Main';
+import About from '../components/layouts/About'
+import Error from '../components/layouts/Error'
+import Pagination from '../components/layouts/Pagination';
+import Main from '../components/containers/Main';
+import Register from '../components/layouts/Register';
 
 /* OPTIONAL */
 // Lazy Loading to optimising components loading time
@@ -24,6 +26,8 @@ export default function RoutesConfig() {
                     <Route path="/contact"><LazyMain/></Route> */}
                     <Route path="/about" element={<About/>}></Route>
                     <Route path="/contact" element={<Main/>}></Route>
+                    <Route path="/page" element={<Pagination/>}></Route>
+                    <Route path="/register" element={<Register/>}></Route>
                     <Route path="*" element={<Error/>}></Route>
                 </Routes>
             {/* </React.Suspense> */}

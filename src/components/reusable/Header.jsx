@@ -189,14 +189,17 @@ export default function Header() {
           <Link href="/" underline="hover" style={{ color: "white" }} pr={2}>
             Home
           </Link>
-          <Link href="dashboard" underline="hover" style={{ color: "white" }} pr={2}>
-            Dashboard
+          <Link href="page" underline="hover" style={{ color: "white" }} pr={2}>
+            Pagination
           </Link>
           <Link href="about" underline="hover" style={{ color: "white" }} pr={2}>
             About
           </Link>
           <Link href="contact" underline="hover" style={{ color: "white" }} pr={2}>
             Contacts
+          </Link>
+          <Link href="register" underline="hover" style={{ color: "white" }} pr={2}>
+            Register
           </Link>
           <Box sx={{ flexGrow: 1 }} />
           <Box sx={{ display: { xs: 'none', md: 'flex' } }}>

@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import Header from "./components/reusable/Header";
 import { Provider } from 'react-redux'
-import { store, persistor } from './redux/store'
+import { store, persistor } from './redux/store/store'
 import { PersistGate } from 'redux-persist/integration/react'
 import Routes from "./config/RoutesConfig"
 
