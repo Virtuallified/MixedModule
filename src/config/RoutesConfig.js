@@ -3,12 +3,16 @@ import React from 'react'
    you also not need to use "exact" in Route declaration,
    you also need to use "element" instead of "component" */
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom"; 
-/* Components */
+/* Components [ Reusable ]*/
+import Header from "../components/reusable/Header";
+/* Components [ Containers ] */
+import Main from '../components/containers/Main';
+/* Components [ Layouts ] */
 import About from '../components/layouts/About'
 import Error from '../components/layouts/Error'
 import Pagination from '../components/layouts/Pagination';
-import Main from '../components/containers/Main';
-import Register from '../components/layouts/Register';
+import { Dashboard } from '../components/layouts/Dashboard';
+
 
 /* OPTIONAL */
 // Lazy Loading to optimising components loading time
@@ -19,15 +23,17 @@ import Register from '../components/layouts/Register';
 export default function RoutesConfig() {
     return (
         <Router>
+            <Header/>
             {/* <React.Suspense fallback="Loading..."> */}
                 <Routes>
                     {/* OPTIONAL : for lazyloading of components */}
                     {/* <Route path="/about"><LazyAbout/></Route>
                     <Route path="/contact"><LazyMain/></Route> */}
                     <Route path="/about" element={<About/>}></Route>
-                    <Route path="/contact" element={<Main/>}></Route>
+                    <Route path="/contact" element={<Main module={"contact"}/>}></Route>
+                    <Route path="/authentication" element={<Main module={"authentication"}/>}></Route>
                     <Route path="/page" element={<Pagination/>}></Route>
-                    <Route path="/register" element={<Register/>}></Route>
+                    <Route path="/dashboard" element={<Dashboard/>}></Route>
                     <Route path="*" element={<Error/>}></Route>
                 </Routes>
             {/* </React.Suspense> */}

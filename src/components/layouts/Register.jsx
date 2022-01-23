@@ -1,10 +1,8 @@
-import axios from 'axios';
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import { setAlert } from '../../redux/actions/alertAction';
 import { doRegister } from '../../redux/actions/authActions';
 import { connect } from 'react-redux';
-import Alert from '../reusable/Alerts'
 
 const Register = ({ setAlert, doRegister }) => {
 
@@ -37,7 +35,7 @@ const Register = ({ setAlert, doRegister }) => {
                     <summary>Data</summary>
                     <p>
                         email: eve.holt@reqres.in,
-                        password: pistol
+                        password: 12345
                     </p>
                 </details>
                 <form onSubmit={e => onSubmit(e)}>
@@ -57,7 +55,6 @@ const Register = ({ setAlert, doRegister }) => {
                         <label htmlFor="pwd">Retype Password:</label>
                         <input type="password" className="form-control" id="pwd2" value={rpassword} onChange={e => onChange(e)} placeholder="Enter password" name="rpassword" />
                     </div>
-                    <Alert />
                     <button type="submit" className="btn btn-primary float-right">Register</button>
                 </form>
             </div>

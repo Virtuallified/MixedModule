@@ -1,4 +1,4 @@
-import { ADD_TASK, DEL_TASK, STS_TASK } from "../actions/constants"
+import { ADD_TASK, DEL_TASK, STS_TASK } from "../utils/constants"
 
 const initialData = {
     taskItems: []

@@ -17,6 +17,9 @@ import NotificationsIcon from '@mui/icons-material/Notifications';
 import MoreIcon from '@mui/icons-material/MoreVert';
 import Link from '@mui/material/Link';
 // import { Link } from "react-router-dom";
+import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
+import { doLogout } from '../../redux/actions/authActions'
 
 const Search = styled('div')(({ theme }) => ({
   position: 'relative',
@@ -58,7 +61,7 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
   },
 }));
 
-export default function Header() {
+const Header = ({ auth: { isAuthenticated, loading }, doLogout }) => {
   const [anchorEl, setAnchorEl] = React.useState(null);
   const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = React.useState(null);
 
@@ -101,6 +104,7 @@ export default function Header() {
     >
       <MenuItem onClick={handleMenuClose}>Profile</MenuItem>
       <MenuItem onClick={handleMenuClose}>My account</MenuItem>
+      {isAuthenticated && <MenuItem onClick={doLogout}>Logout</MenuItem>}
     </Menu>
   );
 
@@ -198,9 +202,20 @@ export default function Header() {
           <Link href="contact" underline="hover" style={{ color: "white" }} pr={2}>
             Contacts
           </Link>
-          <Link href="register" underline="hover" style={{ color: "white" }} pr={2}>
-            Register
-          </Link>
+          {isAuthenticated ?
+            <>
+              <Link href="dashboard" underline="hover" style={{ color: "white" }} pr={2}>
+                Dashboard
+              </Link>
+              <Link href="#" onClick={doLogout} underline="hover" style={{ color: "white" }} pr={2}>
+                Logout
+              </Link>
+            </>
+            :
+            <Link href="authentication" underline="hover" style={{ color: "white" }} pr={2}>
+              Authentication
+            </Link>
+          }
           <Box sx={{ flexGrow: 1 }} />
           <Box sx={{ display: { xs: 'none', md: 'flex' } }}>
             <IconButton size="large" aria-label="show 4 new mails" color="inherit">
@@ -248,3 +263,14 @@ export default function Header() {
     </Box>
   );
 }
+
+Header.propTypes = {
+  doLogout: PropTypes.func.isRequired,
+  auth: PropTypes.object.isRequired
+}
+
+const mapStateToProps = (state) => ({
+  auth: state.authReducer
+})
+
+export default connect(mapStateToProps, { doLogout })(Header);
