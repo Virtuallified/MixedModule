@@ -14,4 +14,4 @@ export const LOG_FAIL = "LOGIN_FAILURE"
 /* USER */
 export const LOAD_USR = "LOAD_USER"
 export const AUTH_ERR = "AUTH_ERROR"
-export const LOG_OUT = "LOGOUT"
+export const LOG_OUT  = "LOGOUT"
