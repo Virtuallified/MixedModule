@@ -1,4 +1,4 @@
-import { SET_ALERT, REM_ALERT } from "../utils/constants"
+import { SET_ALERT, REM_ALERT } from "../actionTypes/constants"
 
 const initialData = []
 

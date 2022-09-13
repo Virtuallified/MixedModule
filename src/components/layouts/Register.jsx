@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
-import { setAlert } from '../../redux/actions/alertAction';
-import { doRegister } from '../../redux/actions/authActions';
+import { setAlert } from '../../redux/actions/alert.action';
+import { doRegister } from '../../redux/actions/auth.actions';
 import { connect } from 'react-redux';
 
 const Register = ({ setAlert, doRegister }) => {

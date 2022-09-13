@@ -1,4 +1,4 @@
-import { SET_ALERT, REM_ALERT } from "../utils/constants"
+import { SET_ALERT, REM_ALERT } from "../actionTypes/constants"
 import {v4 as uuid} from "uuid"; 
 
 export const setAlert = (msg, alertType, timeout = 5000) => dispatch => {

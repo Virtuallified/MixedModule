@@ -19,7 +19,7 @@ import Link from '@mui/material/Link';
 // import { Link } from "react-router-dom";
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
-import { doLogout } from '../../redux/actions/authActions'
+import { doLogout } from '../../redux/actions/auth.actions'
 
 const Search = styled('div')(({ theme }) => ({
   position: 'relative',

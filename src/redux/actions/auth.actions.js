@@ -1,6 +1,6 @@
-import {REG_SUCC, REG_FAIL, LOG_SUCC, LOG_FAIL, LOAD_USR, AUTH_ERR, LOG_OUT} from "../utils/constants"
+import {REG_SUCC, REG_FAIL, LOG_SUCC, LOG_FAIL, LOAD_USR, AUTH_ERR, LOG_OUT} from "../actionTypes/constants"
 import axios from "axios";
-import { setAlert } from '../../redux/actions/alertAction';
+import { setAlert } from '../../redux/actions/alert.action';
 import { setAuthToken } from "../utils/setAuthToken"
 
 // Load User

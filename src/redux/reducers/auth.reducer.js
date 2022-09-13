@@ -1,4 +1,4 @@
-import { REG_SUCC, REG_FAIL, LOG_SUCC, LOG_FAIL, LOAD_USR, AUTH_ERR, LOG_OUT } from "../utils/constants"
+import { REG_SUCC, REG_FAIL, LOG_SUCC, LOG_FAIL, LOAD_USR, AUTH_ERR, LOG_OUT } from "../actionTypes/constants"
 
 const initialData = {
     token: localStorage.getItem('token'),

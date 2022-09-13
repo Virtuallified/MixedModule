@@ -3,7 +3,7 @@ import Routes from "./config/RoutesConfig"
 import { Provider } from 'react-redux'
 import { store, persistor } from './redux/store/store'
 import { PersistGate } from 'redux-persist/integration/react'
-import { loadUser } from './redux/actions/authActions'
+import { loadUser } from './redux/actions/auth.actions'
 import { setAuthToken } from './redux/utils/setAuthToken';
 
 if (localStorage.token) {

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
-import { setAlert } from '../../redux/actions/alertAction';
-import { doLogin } from '../../redux/actions/authActions';
+import { setAlert } from '../../redux/actions/alert.action';
+import { doLogin } from '../../redux/actions/auth.actions';
 import { connect } from 'react-redux';
 import { Navigate } from 'react-router-dom';
 
